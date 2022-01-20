@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="62dfa53b-b15a-4b61-99aa-051e32d4cf3e" created="3.10.1" activeEnvironment="Default environment" name="Employee_project" updated="3.10.1 2021-10-13T15:50:30Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="a3e6955c-3693-40fd-b675-8ffee35bb119" name="Employee_Services" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="Employee_Services.json">
+      <con:part>
+        <con:url>Employee_Services.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"Employee_Services","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/users":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}},"post":{"description":"","requestBody":{"content":{"application/json":{"example":"[\n    {\n        \"id\": 11,\n        \"name\": \"Krishna Rungta\",\n        \"username\": \"Bret\",\n        \"email\": \"Sincere@april.biz\",\n        \"address\": {\n            \"street\": \"Kulas Light\",\n            \"suite\": \"Apt. 556\",\n            \"city\": \"Gwenborough\",\n            \"zipcode\": \"92998-3874\",\n            \"geo\": {\n                \"lat\": \"-37.3159\",\n                \"lng\": \"81.1496\"\n            }\n        },\n        \"phone\": \"1-770-736-8031 x56442\",\n        \"website\": \"hildegard.org\",\n        \"company\": {\n            \"name\": \"Romaguera-Crona\",\n            \"catchPhrase\": \"Multi-layered client-server neural-net\",\n            \"bs\": \"harness real-time e-markets\"\n        }\n    }\n]"}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="users" path="/users" id="98edd72f-0ae4-4b79-be47-417c519e680d">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="addEmployee" id="95871f40-596a-494d-86f9-150ea4a27733" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="addEmployee" id="0ea88b9f-f715-40ad-a429-0181458d4dc2" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+          <con:request>[
+    {
+        "id": 11,
+        "name": "Krishna Rungta",
+        "username": "Bret",
+        "email": "Sincere@april.biz",
+        "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+                "lat": "-37.3159",
+                "lng": "81.1496"
+            }
+        },
+        "phone": "1-770-736-8031 x56442",
+        "website": "hildegard.org",
+        "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+        }
+    }
+]</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="getEmployee" id="6261c42e-a150-4121-93c5-673b42632c3e" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="getEmployee" id="a16747e0-27de-4f7f-940d-8f94b05b3b2d" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="03cc9bf7-eb1b-485a-b380-fe14755db12e" name="Employee_Suite">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="cc481edd-5387-4f0b-a250-ef18241864bb" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Employee_case" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="properties" name="Employee_data" id="b12f0abc-9bd1-4cfe-8acc-539a93cc7909">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>emp_id</con:name>
+              <con:value>1</con:value>
+            </con:property>
+            <con:property>
+              <con:name>emp_name</con:name>
+              <con:value>Leanne Graham</con:value>
+            </con:property>
+            <con:property>
+              <con:name>emp_address</con:name>
+              <con:value>{"street":"Kulas Light","suite":"Apt. 556","city":"Gwenborough","zipcode":"92998-3874","geo":{"lat":"-37.3159","lng":"81.1496"}}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>emp_name1</con:name>
+              <con:value>Krishna Rungta</con:value>
+            </con:property>
+            <con:property>
+              <con:name>emp_mail</con:name>
+              <con:value>Sincere@april.biz</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="addEmployee" id="4101b3f8-9e7e-444c-8877-9b5472d4e65f">
+        <con:settings/>
+        <con:config service="Employee_Services" resourcePath="/users" methodName="addEmployee" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="addEmployee" id="0ea88b9f-f715-40ad-a429-0181458d4dc2" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+            <con:request>[
+    {
+        "id": 11,
+        "name": "${addEmployee#Response#$['0']['name']}",
+        "username": "Bret",
+        "email": "${addEmployee#Response#$['0']['email']}",
+        "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+                "lat": "-37.3159",
+                "lng": "81.1496"
+            }
+        },
+        "phone": "1-770-736-8031 x56442",
+        "website": "hildegard.org",
+        "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+        }
+    }
+]</con:request>
+            <con:originalUri>https://jsonplaceholder.typicode.com/users</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="81cc2a9a-6bbe-414b-ba5d-8eaeb774acb4" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="b1998b92-e520-4c45-a9b8-756d3e136ad5" name="Contains">
+              <con:configuration>
+                <token>Bret</token>
+                <ignoreCase>true</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple NotContains" id="d2926f9b-a0eb-41f4-840e-049c2185743d" name="Not Contains">
+              <con:configuration>
+                <token>bank</token>
+                <ignoreCase>true</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="set_data" id="dc67c408-99db-4ade-b341-6501e54e4584">
+        <con:settings/>
+        <con:config>
+          <script>def emp_id = context.expand( '${getEmployee#Response#$[0][\'id\']}' )
+log.info emp_id 
+
+def data = testRunner.testCase.testSteps["Employee_data"]
+data.setPropertyValue("emp_id",emp_id)
+
+//fetch name from response
+def emp_name = context.expand( '${getEmployee#Response#$[0][\'name\']}' )
+log.info emp_name
+//def data = testRunner.testCase.testSteps["Employee_data"]
+data.setPropertyValue("emp_name",emp_name)
+
+//fetch address
+def emp_address = context.expand( '${getEmployee#Response#$[0][\'address\']}' )
+log.info emp_address 
+//def data = testRunner.testCase.testSteps["Employee_data"]
+data.setPropertyValue("emp_address",emp_address)
+
+//fetch id name from post request
+def emp_name1 = context.expand( '${addEmployee#Response#$[\'0\'][\'name\']}' )
+log.info emp_name1 
+//def data = testRunner.testCase.testSteps["Employee_data"]
+data.setPropertyValue("emp_name1",emp_name1)
+
+//fetch mail 
+def emp_mail = context.expand( '${addEmployee#Response#$[\'0\'][\'email\']}' )
+log.info emp_mail 
+//def data = testRunner.testCase.testSteps["Employee_data"]
+data.setPropertyValue("emp_mail",emp_mail)</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="getEmployee" id="26c05842-91e4-45de-a0ab-f62d3c72d0d1">
+        <con:settings/>
+        <con:config service="Employee_Services" resourcePath="/users" methodName="getEmployee" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="getEmployee" id="a16747e0-27de-4f7f-940d-8f94b05b3b2d" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://jsonplaceholder.typicode.com/users</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="301158ed-23c2-479c-9691-bf514fb3bc6c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="7f8a7230-95ea-4c69-a1f8-a8c2c7d915b6" name="Contains">
+              <con:configuration>
+                <token>id</token>
+                <ignoreCase>true</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple NotContains" id="7270d331-46a7-4026-bc01-3a64317ec5f0" name="Not Contains">
+              <con:configuration>
+                <token>social media</token>
+                <ignoreCase>true</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
